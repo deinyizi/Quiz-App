@@ -1,0 +1,32 @@
+﻿<Page x:Class="Quiz.QuizBookmark"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Quiz"
+      mc:Ignorable="d" 
+     Title="QuizBookmark" Height="900" Width="600"
+         Background="Transparent"
+       >
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#E57BE9F6" Offset="0.0"/>
+                        <GradientStop Color="#7FF083DA" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+               
+            </Border>
+
+        </Grid>
+    </Grid>
+</Page>

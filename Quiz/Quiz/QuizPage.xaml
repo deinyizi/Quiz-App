@@ -1,0 +1,160 @@
+﻿<Window x:Class="Quiz.QuizPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:Quiz"
+        mc:Ignorable="d"
+        Title="QuizPage" Height="806.063" Width="791.993" Top="0"
+        AllowsTransparency="False" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,10.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,0,0,9.8" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid RenderTransformOrigin="0.51,0.75" Grid.RowSpan="2" Margin="0,0,0,-20.2">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/whiqu.jpg" Stretch="UniformToFill"/>
+                </Grid.Background>
+                <StackPanel Orientation="Horizontal">
+
+                    <Button Margin="20,0,0,757" Background="White" Height="Auto" BorderBrush="White" BorderThickness="-0" Width="63" Click="Button_Click">
+                        <iconPacks:PackIconMaterial Kind="WindowMaximize"
+                                                Foreground="Red"
+                                                Width="50" Height="20"  RenderTransformOrigin="1.403,1" Margin="-8,10,0,0">
+                            <iconPacks:PackIconMaterial.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.49"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconMaterial.RenderTransform>
+                        </iconPacks:PackIconMaterial>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Margin="0,0,10,10.4">
+                    <Border BorderThickness="2" VerticalAlignment="Top" Height="73" Margin="20,65,418,0" >
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFFB192" Offset="1"/>
+                                <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <TextBlock x:Name="timerTextBox" TextWrapping="Wrap" FontSize="36" FontWeight="Bold" Padding="20, 0, 20, 20" Margin="14,4,-88,-2" ><Run Text="TIME: 5:00"/><LineBreak/><Run/></TextBlock>
+                    </Border>
+                    <TextBlock x:Name="questionIndexTextBox" HorizontalAlignment="Right" Text="Question number 1 of 10" FontWeight="Bold" FontStyle="Italic" Foreground="Black" TextWrapping="Wrap" FontSize="20"  Padding="10, 0, 0, 0" Margin="0,4,-2,-30" Width="281" />
+
+                    <Border BorderThickness="2" VerticalAlignment="Top" Height="102" Margin="25,50,26,0">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
+                                <GradientStop Color="#FFFFB192" Offset="1"/>
+                                <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <TextBlock x:Name="questionTextBox"  Text="Question" TextWrapping="Wrap" FontSize="20" FontWeight="Bold"  Margin="8.4,8.4,0,8.8" Width="711" />
+                    </Border>
+
+                    <StackPanel  HorizontalAlignment="Center" Margin="0,110,0,0" Orientation="Horizontal">
+                        <RadioButton  FontSize="15" Margin="0,40,0,0" GroupName="optionButton" x:Name="radioButton1">
+                            <RadioButton.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </RadioButton.LayoutTransform>
+
+                            <TextBlock x:Name="option1" Text="Option"  Width="271">
+				
+                                <!--<Run Foreground="Green" FontWeight="Bold">ABC</Run>-->
+                            </TextBlock>
+
+                        </RadioButton>
+                        <RadioButton Padding="0" FontSize="15" Margin="-200,40,0,0" GroupName="optionButton" x:Name="radioButton2">
+                            <RadioButton.LayoutTransform >
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+
+                            </RadioButton.LayoutTransform>
+
+                            <WrapPanel>
+                                <TextBlock x:Name="option2" Width="62"><Run Text=" Option"/><!--<Run FontWeight="Bold">XYZ</Run>--></TextBlock>
+
+                            </WrapPanel>
+
+                        </RadioButton>
+                    </StackPanel>
+                    <StackPanel  HorizontalAlignment="Center"  Orientation="Horizontal"  Width="907" Margin="60,0,-167,0"  >
+                        <RadioButton   FontSize="15"  Margin="47,70,0,0" GroupName="optionButton" x:Name="radioButton3">
+                            <RadioButton.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </RadioButton.LayoutTransform>
+
+                            <TextBlock x:Name="option3" Text="Option"  Width="271">
+				
+                                <!--<Run Foreground="Green" FontWeight="Bold">ABC</Run>-->
+                            </TextBlock>
+
+                        </RadioButton>
+                        <RadioButton Padding="0" FontSize="15" Margin="-200,70,0,0" GroupName="optionButton" x:Name="radioButton4">
+                            <RadioButton.LayoutTransform >
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+
+                            </RadioButton.LayoutTransform>
+
+                            <WrapPanel>
+                                <TextBlock x:Name="option4" Width="65"><Run Text=" Option"/><!--<Run FontWeight="Bold">XYZ</Run>--></TextBlock>
+
+                            </WrapPanel>
+
+                        </RadioButton>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,130,0,0">
+                        <Button x:Name="prevButton" Width="158" Height="50" Content="PREVIOUS" Margin="25,0,0,0" Style="{StaticResource button1}" Foreground="White" FontSize="15" Click="prevButton_Click">
+                            <Button.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FFFFB192" Offset="1"/>
+                                    <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button x:Name="nextButton" Width="158" Height="50" Content="NEXT" Margin="30,0,0,0" Style="{StaticResource button1}" Foreground="White" FontSize="15" Click="nextButton_Click">
+                            <Button.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FFFFB192" Offset="1"/>
+                                    <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+
+
+                        <Button x:Name="submitButton" Width="158" Height="50" Content="SUBMIT"  Margin="30,0,0,0" Style="{StaticResource button1}" Foreground= "White" FontSize="15" Click="submitButton_Click">
+                            <Button.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FFFFB192" Offset="1"/>
+                                    <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+
+
+                        <Button x:Name="cancelButton" Width="158" Height="50" Margin="30,0,0,0" Content="CANCEL"  Style="{StaticResource button1}" Foreground="White" FontSize="15" Click="cancelButton_Click">
+                            <Button.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FFFFB192" Offset="1"/>
+                                    <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

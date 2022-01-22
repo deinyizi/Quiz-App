@@ -1,0 +1,150 @@
+﻿<Window x:Class="Quiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800.263" Width="791.993" Top="0"
+        AllowsTransparency="False" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid RenderTransformOrigin="0.51,0.75" Grid.RowSpan="2">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Images/gquiz.jpg" Stretch="UniformToFill"/>
+                </Grid.Background>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="20,0,0,757" Background="White" Height="Auto" BorderBrush="White" BorderThickness="-0" Width="63" Click="Button_Click_4">
+                        <iconPacks:PackIconMaterial Kind="ArrowCollapseLeft"
+                                                Foreground="Red"
+                                                Width="50" Height="20"  RenderTransformOrigin="1.403,1" Margin="-8,0,0,0">
+                            <iconPacks:PackIconMaterial.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.49"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconMaterial.RenderTransform>
+                        </iconPacks:PackIconMaterial>
+                    </Button>
+
+                    <Button Margin="20,0,0,757" Background="White" Height="Auto" BorderBrush="White" BorderThickness="-0" Width="63" Click="Button_Click_2">
+                        <iconPacks:PackIconMaterial Kind="WindowMaximize"
+                                                Foreground="Red"
+                                                Width="50" Height="20"  RenderTransformOrigin="1.403,1" Margin="-8,10,0,0">
+                            <iconPacks:PackIconMaterial.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.49"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconMaterial.RenderTransform>
+                        </iconPacks:PackIconMaterial>
+                    </Button>
+
+                    <Button Margin="20,0,0,757" Background="White" Height="Auto" BorderBrush="White" BorderThickness="0" Width="66" Click="Button_Click_3" >
+                        <iconPacks:PackIconMaterial Kind="WindowClose"
+                                                Foreground="Red"
+                                                Width="50" Height="20"  RenderTransformOrigin="1.403,1" Margin="-8,10,0,0">
+                            <iconPacks:PackIconMaterial.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.49"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconMaterial.RenderTransform>
+                        </iconPacks:PackIconMaterial>
+                    </Button>
+                </StackPanel>
+
+
+                <StackPanel VerticalAlignment="Center">
+                    <Image Source="Images/test11.png" Margin="-2,-550,-27,0" Height="200" />
+                </StackPanel>
+
+
+                <StackPanel Grid.Row="1"  Margin="00,00,0,0" VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal" Height="51" Margin="0,0,43,0">
+                        <TextBox x:Name="usernameTextBox"  materialDesign:HintAssist.Hint="Username" 
+                                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                                  FontSize="20" 
+                                 Margin="40,0,0,0"
+                                  FontWeight="SemiBold"
+                                  Foreground="#FF5C4D4D"/>
+                        <iconPacks:PackIconMaterial Kind="Account" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="Black"
+                                                Width="56" Height="30" Margin="570,11,0,10.2" RenderTransformOrigin="0.5,0.5">
+                            <iconPacks:PackIconMaterial.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.214"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconMaterial.RenderTransform>
+                        </iconPacks:PackIconMaterial>
+                    </StackPanel>
+                    <Border
+                        Height="2"
+                        Background="Black"
+                        Opacity="0.5" Margin="40,0,43,0"/>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <PasswordBox x:Name="passwordBox" materialDesign:HintAssist.Hint="Password"
+                                     Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                                     Margin="40 0,0,0" 
+                                     FontSize="20"
+                                     FontWeight="SemiBold"
+                                     Foreground="#FF5C4D4D"/>
+                        <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="Black"
+                                                Width="60" Height="34" Margin="570,20,0,0"/>
+                    </StackPanel>
+                    <Border
+                        Height="2"
+                        Background="Black"
+                        Opacity="0.5" Margin="40,0,43,0"/>
+                    <StackPanel Orientation="Horizontal" Margin="100,70,0,0" Height="83">
+                        <Button Width="150" Height="40" Content="LOGIN" FontSize="15" Margin="40,0,60,0" Style="{StaticResource button1}" Foreground="white" Click="Button_Click_1">
+                            <Button.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FFFFB192" Offset="1"/>
+                                    <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="150" Height="40" Click="Button_Click" Margin="70,20,60,20"  FontSize="15"  Content="REGISTER" Style="{StaticResource button1}" Foreground="White">
+                            <Button.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FFFFB192" Offset="1"/>
+                                    <GradientStop Color="#D6FD1032" Offset="0.138"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                    <Border 
+                       Height="2"
+                        Background="Black"
+                        Opacity="0.5" Margin="40,0,43,0"/>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
